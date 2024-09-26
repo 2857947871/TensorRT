@@ -13,7 +13,7 @@ int main()
     auto level          = logger::Level::VERB;
     auto params         = model::Params();
 
-    params.img          = {224, 224, 4};
+    params.img          = {224, 224, 3};
     params.num_cls      = 1000;
     params.task         = model::task_type::CLASSIFICATION;
     params.dev          = model::device::GPU;
