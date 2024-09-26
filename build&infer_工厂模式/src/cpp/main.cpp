@@ -7,7 +7,7 @@
 
 int main() 
 {
-    // 工厂模式: 调用的整个过程精简化, 调用即初始化
+    // 工厂模式: 调用即初始化
     std::string onnxPath = "models/onnx/resnet50.onnx";
     
     auto level          = logger::Level::VERB;
