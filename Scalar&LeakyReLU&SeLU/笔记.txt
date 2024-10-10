@@ -1,0 +1,17 @@
+重新创造一个CustomScalar算子作为plugin提供给TensorRT
+1. ONNX自定义算子
+    (OpenMMLab 4.ONNX自定义算子实战)
+    (1)编写C++版本(也可以省略, 直接继承torch.autograd.Function编写Pytorch版本)
+    (2)编写Pytorch版本(使用torch.autograd.Function)
+        customScalar_export.py
+
+2. 转成ONNX
+    customScalar_export.py
+
+3. 编写TensorRT插件
+    (1)实现自定义算子.cu
+        src/cpp/customScalar_kernel.cu
+    
+    (2)继承IPluginV2DynamicExt和IPluginCreator
+        src/cpp/customScalar_plugin.hpp
+        src/cpp/customScalar_plugin.cpp
